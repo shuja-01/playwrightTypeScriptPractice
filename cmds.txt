@@ -1,0 +1,56 @@
+Inside that directory, you can run several commands:
+
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+
+run only single test file :
+  npx playwright test tests/mytest.spec.ts
+
+run on specific browser:
+  npx playwright test --headed --project=chromium
+
+run on specific browser:
+  npx playwright test --headed --project=firefox
+
+run on specific browser:
+  npx playwright test --headed --project=webkit
+
+run all browser
+  npx playwright test --headed
+
+run with UI mode
+  npx playwright test --ui
+
+run with UI mode for specific test file
+  npx playwright test tests/mytest.spec.ts --ui
+
+run multiple test files
+  npx playwright test tests/mytest.spec.ts tests/mytest2.spec.ts
+
+run specific test from file:
+  npx playwright test tests/mytest.spec.ts -g "title Of the Test"
+
+run specific test from multiple files:
+  npx playwright test tests/mytest.spec.ts tests/mytest2.spec.ts -g "title Of the Test"
+
+run in debug mode:
+  npx playwright test --debug tests/mytest.spec.ts
