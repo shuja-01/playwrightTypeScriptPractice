@@ -20,6 +20,16 @@ export class Login {
         this.logoutLink = page.getByRole('button', { name: 'Logout' });
     }
 
+    async loadPage(url: string) {
+        await this.page.goto(url);
+    }
+
+    async fillCredentials(username: string, password: string) {
+        await this.usernameInput.fill(username);
+        await this.passwordInput.fill(password);
+        await this.loginButton.click();
+    }
+
     async launchApp(url: string) {
         await this.page.goto(url);
     }
